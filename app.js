@@ -2,7 +2,7 @@ var scores, roundScore, activePlayer, gamePlaying;
 
 init();
 
-const scoreToWin = 20;
+const scoreToWin = 40;
 
 document.querySelector('.btn-new').addEventListener('click', init);
 
@@ -36,7 +36,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 		document.querySelector('#current-' + activePlayer).textContent = dice;
 		var diceDOM = document.querySelector('.dice');
 		diceDOM.style.display = 'block';
-		diceDOM.src = 'dice-' + dice + '.png';
+		diceDOM.src = './img/dice-' + dice + '.png';
 
 			if(dice !== 1) {
 			roundScore += dice;
