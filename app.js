@@ -2,6 +2,8 @@ var scores, roundScore, activePlayer, gamePlaying;
 
 init();
 
+const scoreToWin = 20;
+
 document.querySelector('.btn-new').addEventListener('click', init);
 
 function init () {
@@ -54,7 +56,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 		document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
-		if(scores[activePlayer] >= 50) {
+		if(scores[activePlayer] >= scoreToWin) {
 			document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
 			document.querySelector('.dice').style.display = 'none';
 			document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
